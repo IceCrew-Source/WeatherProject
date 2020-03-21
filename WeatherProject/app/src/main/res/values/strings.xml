@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">Météo App</string>
+
+    <!-- Activity Main -->
+
+    <!-- TextView -->
+
+    <string name="typeTerrain">Type de terrain :</string>
+
+    <!-- CheckBox -->
+
+    <string name="dur">Dur</string>
+    <string name="terreBattue">Terre battue</string>
+    <string name="gazon">Gazon</string>
+
+    <!-- Button -->
+
+    <string name="choixJour">Choisissez quel jour !</string>
+
+</resources>
