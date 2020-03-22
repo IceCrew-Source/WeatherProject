@@ -109,20 +109,20 @@ public class MeteoActivityInformations extends AppCompatActivity {
                 weather.setText("Ensoleilé");
         }
 
-        /*button.setOnClickListener(new View.OnClickListener() {
+        button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_INSERT)
                         .setData(CalendarContract.Events.CONTENT_URI)
-                        .putExtra(CalendarContract.Events.TITLE, title)
-                        .putExtra(CalendarContract.Events.EVENT_LOCATION, location)
-                        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, begin)
-                        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, end);
+                        .putExtra(CalendarContract.Events.TITLE, "titre")
+                        .putExtra(CalendarContract.Events.EVENT_LOCATION, "location")
+                        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, 10000)
+                        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, 50000);
                 if (intent.resolveActivity(getPackageManager()) != null) {
                     startActivity(intent);
                 }
             }
-        });*/
+        });
     }
 
     private void initializeUI(){
@@ -138,6 +138,6 @@ public class MeteoActivityInformations extends AppCompatActivity {
         nebulosite = findViewById(R.id.idNebulosite);
         aurore = findViewById(R.id.idAurore);
         crepuscule = findViewById(R.id.idCrepuscule);
-        button = findViewById(R.id.button);
+        button = findViewById(R.id.button2);
     }
 }
