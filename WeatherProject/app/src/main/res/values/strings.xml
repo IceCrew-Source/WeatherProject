@@ -6,6 +6,8 @@
     <!-- TextView -->
 
     <string name="typeTerrain">Type de terrain :</string>
+    <string name="desc">Cette application sert à trouver un terrain de tennis libre en fonction caractéristiques de celui-ci et de la météo !</string>
+
 
     <!-- CheckBox -->
 

@@ -1,8 +1,12 @@
 package com.example.myapplication;
 
+import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.provider.CalendarContract;
 import android.text.Html;
+import android.view.View;
+import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
@@ -13,6 +17,7 @@ import java.util.Date;
 public class MeteoActivityInformations extends AppCompatActivity {
 
     private TextView date, temp, weather, windSpeed, temp2, rain, pressure, humidity, nebulosite, aurore, crepuscule;
+    private Button button;
     private ImageView img;
     private Date sunrise, sunset;
 
@@ -103,6 +108,21 @@ public class MeteoActivityInformations extends AppCompatActivity {
                 img.setImageResource(R.drawable.cielbleu);
                 weather.setText("Ensoleilé");
         }
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(Intent.ACTION_INSERT)
+                        .setData(CalendarContract.Events.CONTENT_URI)
+                        .putExtra(CalendarContract.Events.TITLE, title)
+                        .putExtra(CalendarContract.Events.EVENT_LOCATION, location)
+                        .putExtra(CalendarContract.EXTRA_EVENT_BEGIN_TIME, begin)
+                        .putExtra(CalendarContract.EXTRA_EVENT_END_TIME, end);
+                if (intent.resolveActivity(getPackageManager()) != null) {
+                    startActivity(intent);
+                }
+            }
+        });
     }
 
     private void initializeUI(){
@@ -118,5 +138,6 @@ public class MeteoActivityInformations extends AppCompatActivity {
         nebulosite = findViewById(R.id.idNebulosite);
         aurore = findViewById(R.id.idAurore);
         crepuscule = findViewById(R.id.idCrepuscule);
+        button = findViewById(R.id.button);
     }
 }

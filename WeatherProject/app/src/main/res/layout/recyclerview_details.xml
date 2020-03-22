@@ -219,4 +219,14 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/view" />
 
+    <Button
+        android:id="@+id/button2"
+        android:layout_width="146dp"
+        android:layout_height="39dp"
+        android:layout_marginTop="214dp"
+        android:text="Réservez !"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/view" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>
