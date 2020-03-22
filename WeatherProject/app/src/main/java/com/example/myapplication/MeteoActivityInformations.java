@@ -109,7 +109,7 @@ public class MeteoActivityInformations extends AppCompatActivity {
                 weather.setText("Ensoleilé");
         }
 
-        button.setOnClickListener(new View.OnClickListener() {
+        /*button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(Intent.ACTION_INSERT)
@@ -122,7 +122,7 @@ public class MeteoActivityInformations extends AppCompatActivity {
                     startActivity(intent);
                 }
             }
-        });
+        });*/
     }
 
     private void initializeUI(){
